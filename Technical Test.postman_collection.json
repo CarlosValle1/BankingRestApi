@@ -1,0 +1,1461 @@
+{
+	"info": {
+		"_postman_id": "417db071-00be-4f84-92be-3061ab4a30f1",
+		"name": "Technical Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25550190"
+	},
+	"item": [
+		{
+			"name": "Clients Endpoints",
+			"item": [
+				{
+					"name": "Get Only One Client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7278/api/Client/GetOne?clientId=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Client",
+								"GetOne"
+							],
+							"query": [
+								{
+									"key": "clientId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7278/api/Client/GetOne?clientId=2",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Client",
+										"GetOne"
+									],
+									"query": [
+										{
+											"key": "clientId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "144"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 05:09:29 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"status\": false,\n    \"civilId\": \"987654321\",\n    \"name\": \"Jane Doe\",\n    \"gender\": \"Female\",\n    \"age\": 30,\n    \"address\": \"456 Park Ave\",\n    \"phoneNumber\": \"555-555-5556\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7278/api/Client",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Client"
+							]
+						},
+						"description": "Get all Clients"
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7278/api/Client",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Client"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "1628"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 04:39:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"status\": true,\n        \"civilId\": \"123456789\",\n        \"name\": \"John Smith\",\n        \"gender\": \"Male\",\n        \"age\": 25,\n        \"address\": \"123 Main St\",\n        \"phoneNumber\": \"555-555-5555\"\n    },\n    {\n        \"id\": 2,\n        \"status\": false,\n        \"civilId\": \"987654321\",\n        \"name\": \"Jane Doe\",\n        \"gender\": \"Female\",\n        \"age\": 30,\n        \"address\": \"456 Park Ave\",\n        \"phoneNumber\": \"555-555-5556\"\n    },\n    {\n        \"id\": 3,\n        \"status\": true,\n        \"civilId\": \"111111111\",\n        \"name\": \"Bob Johnson\",\n        \"gender\": \"Male\",\n        \"age\": 35,\n        \"address\": \"789 Elm St\",\n        \"phoneNumber\": \"555-555-5557\"\n    },\n    {\n        \"id\": 4,\n        \"status\": false,\n        \"civilId\": \"222222222\",\n        \"name\": \"Samantha Williams\",\n        \"gender\": \"Female\",\n        \"age\": 40,\n        \"address\": \"321 Oak St\",\n        \"phoneNumber\": \"555-555-5558\"\n    },\n    {\n        \"id\": 5,\n        \"status\": true,\n        \"civilId\": \"333333333\",\n        \"name\": \"David Brown\",\n        \"gender\": \"Male\",\n        \"age\": 45,\n        \"address\": \"147 Pine St\",\n        \"phoneNumber\": \"555-555-5559\"\n    },\n    {\n        \"id\": 6,\n        \"status\": false,\n        \"civilId\": \"444444444\",\n        \"name\": \"Jennifer Jones\",\n        \"gender\": \"Female\",\n        \"age\": 50,\n        \"address\": \"258 Cedar St\",\n        \"phoneNumber\": \"555-555-5560\"\n    },\n    {\n        \"id\": 7,\n        \"status\": true,\n        \"civilId\": \"555555555\",\n        \"name\": \"Daniel Miller\",\n        \"gender\": \"Male\",\n        \"age\": 55,\n        \"address\": \"369 Birch St\",\n        \"phoneNumber\": \"555-555-5561\"\n    },\n    {\n        \"id\": 8,\n        \"status\": false,\n        \"civilId\": \"666666666\",\n        \"name\": \"Susan Davis\",\n        \"gender\": \"Female\",\n        \"age\": 60,\n        \"address\": \"159 Maple St\",\n        \"phoneNumber\": \"555-555-5562\"\n    },\n    {\n        \"id\": 9,\n        \"status\": true,\n        \"civilId\": \"777777777\",\n        \"name\": \"William Garcia\",\n        \"gender\": \"Male\",\n        \"age\": 65,\n        \"address\": \"753 Willow St\",\n        \"phoneNumber\": \"555-555-5563\"\n    },\n    {\n        \"id\": 10,\n        \"status\": false,\n        \"civilId\": \"888888888\",\n        \"name\": \"Kimberly Rodriguez\",\n        \"gender\": \"Female\",\n        \"age\": 70,\n        \"address\": \"951 Oak St\",\n        \"phoneNumber\": \"555-555-5564\"\n    },\n    {\n        \"id\": 11,\n        \"status\": true,\n        \"civilId\": \"jm233223\",\n        \"name\": \"Carlos Valle\",\n        \"gender\": \"Male\",\n        \"age\": 25,\n        \"address\": \"Carlos's place\",\n        \"phoneNumber\": \"(506) 8729-4235\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create One Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"civilId\": \"jm233223\",\r\n  \"name\": \"Carlos Valle\",\r\n  \"gender\": \"Male\",\r\n  \"age\": 25,\r\n  \"address\": \"Carlos's place\",\r\n  \"phoneNumber\": \"(506) 8729-4235\",\r\n  \"password\": \"password\",\r\n  \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7278/api/Client",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Client"
+							]
+						},
+						"description": "Create a new Client"
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"civilId\": \"jm233223\",\r\n  \"name\": \"Carlos Valle\",\r\n  \"gender\": \"Male\",\r\n  \"age\": 25,\r\n  \"address\": \"Carlos's place\",\r\n  \"phoneNumber\": \"(506) 8729-4235\",\r\n  \"password\": \"password\",\r\n  \"status\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7278/api/Client",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Client"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 04:36:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "Successfully created"
+						}
+					]
+				},
+				{
+					"name": "Update One Client",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"civilId\": \"jm11111111\",\r\n    \"name\": \"Carlos Valle\",\r\n    \"gender\": \"Male\",\r\n    \"age\": 25,\r\n    \"address\": \"Carlos's place\",\r\n    \"phoneNumber\": \"(506) 8729-4235\",\r\n    \"password\": \"password\",\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7278/api/Client?clientId=11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Client"
+							],
+							"query": [
+								{
+									"key": "clientId",
+									"value": "11"
+								}
+							]
+						},
+						"description": "Update Client"
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"civilId\": \"jm11111111\",\r\n    \"name\": \"Carlos Valle\",\r\n    \"gender\": \"Male\",\r\n    \"age\": 25,\r\n    \"address\": \"Carlos's place\",\r\n    \"phoneNumber\": \"(506) 8729-4235\",\r\n    \"password\": \"password\",\r\n    \"status\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7278/api/Client?clientId=11",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Client"
+									],
+									"query": [
+										{
+											"key": "clientId",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 04:50:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Patch One Client",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"path\": \"/name\",\r\n    \"op\": \"replace\",\r\n    \"value\": \"Carlos Roberto Valle Martinez\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7278/api/Client?clientId=11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Client"
+							],
+							"query": [
+								{
+									"key": "clientId",
+									"value": "11"
+								}
+							]
+						},
+						"description": "Patch a Client"
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n  {\r\n    \"path\": \"/name\",\r\n    \"op\": \"replace\",\r\n    \"value\": \"Carlos Roberto Valle Martinez\"\r\n  }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7278/api/Client?clientId=11",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Client"
+									],
+									"query": [
+										{
+											"key": "clientId",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 04:56:22 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete One Client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7278/api/Client?clientId=11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Client"
+							],
+							"query": [
+								{
+									"key": "clientId",
+									"value": "11"
+								}
+							]
+						},
+						"description": "Delete a Client"
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7278/api/Client?clientId=11",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Client"
+									],
+									"query": [
+										{
+											"key": "clientId",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 05:00:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Accounts Endpoints",
+			"item": [
+				{
+					"name": "Get One Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7278/api/Account?accountId=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Account"
+							],
+							"query": [
+								{
+									"key": "accountId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7278/api/Account?accountId=3",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Account"
+									],
+									"query": [
+										{
+											"key": "accountId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "114"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 05:14:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"type\": 1,\n    \"initialBalance\": 3000,\n    \"balance\": 3000,\n    \"status\": true,\n    \"clientId\": 3,\n    \"clientName\": \"Bob Johnson\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create One Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": 1,\r\n  \"initialBalance\": 1500,\r\n  \"status\": true,\r\n  \"clientId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7278/api/Account",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Account"
+							]
+						},
+						"description": "New checking account with initial balance of 1500 for client Jane Doe with clientId = 2"
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"type\": 1,\r\n  \"initialBalance\": 1500,\r\n  \"status\": true,\r\n  \"clientId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7278/api/Account",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Account"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 05:17:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "Successfully created"
+						}
+					]
+				},
+				{
+					"name": "Update One Account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": 1,\r\n  \"initialBalance\": 1500,\r\n  \"balance\": 2000,\r\n  \"status\": true,\r\n  \"clientId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7278/api/Account?accountNumber=11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Account"
+							],
+							"query": [
+								{
+									"key": "accountNumber",
+									"value": "11"
+								}
+							]
+						},
+						"description": "Updated the account with Id = 11, changed balance to 2000"
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"type\": 1,\r\n  \"initialBalance\": 1500,\r\n  \"balance\": 2000,\r\n  \"status\": true,\r\n  \"clientId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7278/api/Account?accountNumber=11",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Account"
+									],
+									"query": [
+										{
+											"key": "accountNumber",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 05:22:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Patch One Account",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"path\": \"/balance\",\r\n    \"op\": \"replace\",\r\n    \"value\": 2500\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7278/api/Account?accountId=11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Account"
+							],
+							"query": [
+								{
+									"key": "accountId",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n  {\r\n    \"path\": \"/balance\",\r\n    \"op\": \"replace\",\r\n    \"value\": 2500\r\n  }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7278/api/Account?accountId=11",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Account"
+									],
+									"query": [
+										{
+											"key": "accountId",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 05:26:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete One Account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7278/api/Account?accountId=11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Account"
+							],
+							"query": [
+								{
+									"key": "accountId",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7278/api/Account?accountId=11",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Account"
+									],
+									"query": [
+										{
+											"key": "accountId",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 05:28:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Movements Endpoints",
+			"item": [
+				{
+					"name": "Get One Movement",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7278/api/Movement?movementId=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Movement"
+							],
+							"query": [
+								{
+									"key": "movementId",
+									"value": "3"
+								}
+							]
+						},
+						"description": "Getting one movement for its Id. Notice that the values of the object return were randamly generated before inserted to the database. Ignore any discrepancies between InitialBalance, Balance and Value."
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7278/api/Movement?movementId=3",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Movement"
+									],
+									"query": [
+										{
+											"key": "movementId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "175"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 05:50:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"date\": \"2022-01-03T00:00:00\",\n    \"initialBalance\": 1075,\n    \"value\": 25,\n    \"balance\": 1075,\n    \"accountNumber\": 1,\n    \"accountType\": 1,\n    \"accountStatus\": true,\n    \"clientName\": \"John Smith\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Client Movements In A Day",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7278/api/Movement/Day?clientId=2&date=2022-01-03",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Movement",
+								"Day"
+							],
+							"query": [
+								{
+									"key": "clientId",
+									"value": "2"
+								},
+								{
+									"key": "date",
+									"value": "2022-01-03"
+								}
+							]
+						},
+						"description": "Returns all of the client's movement in the day specified."
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7278/api/Movement/Day?clientId=2&date=2022-01-03",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Movement",
+										"Day"
+									],
+									"query": [
+										{
+											"key": "clientId",
+											"value": "2"
+										},
+										{
+											"key": "date",
+											"value": "2022-01-03"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "176"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 05:35:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 7,\n        \"date\": \"2022-01-03T00:00:00\",\n        \"initialBalance\": 2150,\n        \"value\": 50,\n        \"balance\": 2150,\n        \"accountNumber\": 2,\n        \"accountType\": 2,\n        \"accountStatus\": false,\n        \"clientName\": \"Jane Doe\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create A Movement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"value\": 2500,\r\n  \"accountId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7278/api/Movement",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Movement"
+							]
+						},
+						"description": "Adding a 2500 credit to account with Id = 3"
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"value\": 2500,\r\n  \"accountId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7278/api/Movement",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Movement"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 05:54:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "Successfully created"
+						}
+					]
+				},
+				{
+					"name": "Update One Movement",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"date\": \"2023-01-28T05:56:06.877Z\",\r\n  \"initialBalance\": 1075,\r\n  \"value\": 2500,\r\n  \"balance\": 3025,\r\n  \"accountId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7278/api/Movement?movementId=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Movement"
+							],
+							"query": [
+								{
+									"key": "movementId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"date\": \"2023-01-28T05:56:06.877Z\",\r\n  \"initialBalance\": 1075,\r\n  \"value\": 2500,\r\n  \"balance\": 3025,\r\n  \"accountId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7278/api/Movement?movementId=3",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Movement"
+									],
+									"query": [
+										{
+											"key": "movementId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 06:02:32 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Patch One Movement",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"path\": \"/date\",\r\n    \"op\": \"replace\",\r\n    \"value\": \"2023-01-28\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7278/api/Movement?movementId=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Movement"
+							],
+							"query": [
+								{
+									"key": "movementId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n  {\r\n    \"path\": \"/date\",\r\n    \"op\": \"replace\",\r\n    \"value\": \"2023-01-28\"\r\n  }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7278/api/Movement?movementId=3",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Movement"
+									],
+									"query": [
+										{
+											"key": "movementId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 06:07:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete One Movement",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7278/api/Movement?movementId=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Movement"
+							],
+							"query": [
+								{
+									"key": "movementId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7278/api/Movement?movementId=3",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Movement"
+									],
+									"query": [
+										{
+											"key": "movementId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 06:08:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Report Endpoint",
+			"item": [
+				{
+					"name": "Get Movements In Date Range",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7278/api/Report?clientId=2&initDate=2021-12-31&endDate=2022-01-12",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7278",
+							"path": [
+								"api",
+								"Report"
+							],
+							"query": [
+								{
+									"key": "clientId",
+									"value": "2"
+								},
+								{
+									"key": "initDate",
+									"value": "2021-12-31"
+								},
+								{
+									"key": "endDate",
+									"value": "2022-01-12"
+								}
+							]
+						},
+						"description": "Returns every movement for a given clientId in a given range of dates"
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7278/api/Report?clientId=2&initDate=2021-12-31&endDate=2022-01-12",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7278",
+									"path": [
+										"api",
+										"Report"
+									],
+									"query": [
+										{
+											"key": "clientId",
+											"value": "2"
+										},
+										{
+											"key": "initDate",
+											"value": "2021-12-31"
+										},
+										{
+											"key": "endDate",
+											"value": "2022-01-12"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "1411"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jan 2023 06:12:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 5,\n        \"date\": \"2022-01-01T00:00:00\",\n        \"initialBalance\": 2200,\n        \"value\": 200,\n        \"balance\": 2200,\n        \"accountNumber\": 2,\n        \"accountType\": 2,\n        \"accountStatus\": false,\n        \"clientName\": \"Jane Doe\"\n    },\n    {\n        \"id\": 6,\n        \"date\": \"2022-01-02T00:00:00\",\n        \"initialBalance\": 2100,\n        \"value\": -100,\n        \"balance\": 2100,\n        \"accountNumber\": 2,\n        \"accountType\": 2,\n        \"accountStatus\": false,\n        \"clientName\": \"Jane Doe\"\n    },\n    {\n        \"id\": 7,\n        \"date\": \"2022-01-03T00:00:00\",\n        \"initialBalance\": 2150,\n        \"value\": 50,\n        \"balance\": 2150,\n        \"accountNumber\": 2,\n        \"accountType\": 2,\n        \"accountStatus\": false,\n        \"clientName\": \"Jane Doe\"\n    },\n    {\n        \"id\": 8,\n        \"date\": \"2022-01-04T00:00:00\",\n        \"initialBalance\": 2130,\n        \"value\": -20,\n        \"balance\": 2130,\n        \"accountNumber\": 2,\n        \"accountType\": 2,\n        \"accountStatus\": false,\n        \"clientName\": \"Jane Doe\"\n    },\n    {\n        \"id\": 17,\n        \"date\": \"2022-01-05T00:00:00\",\n        \"initialBalance\": 2115,\n        \"value\": -15,\n        \"balance\": 2115,\n        \"accountNumber\": 2,\n        \"accountType\": 2,\n        \"accountStatus\": false,\n        \"clientName\": \"Jane Doe\"\n    },\n    {\n        \"id\": 18,\n        \"date\": \"2022-01-06T00:00:00\",\n        \"initialBalance\": 2145,\n        \"value\": 30,\n        \"balance\": 2145,\n        \"accountNumber\": 2,\n        \"accountType\": 2,\n        \"accountStatus\": false,\n        \"clientName\": \"Jane Doe\"\n    },\n    {\n        \"id\": 19,\n        \"date\": \"2022-01-07T00:00:00\",\n        \"initialBalance\": 2120,\n        \"value\": -25,\n        \"balance\": 2120,\n        \"accountNumber\": 2,\n        \"accountType\": 2,\n        \"accountStatus\": false,\n        \"clientName\": \"Jane Doe\"\n    },\n    {\n        \"id\": 20,\n        \"date\": \"2022-01-08T00:00:00\",\n        \"initialBalance\": 2140,\n        \"value\": 20,\n        \"balance\": 2140,\n        \"accountNumber\": 2,\n        \"accountType\": 2,\n        \"accountStatus\": false,\n        \"clientName\": \"Jane Doe\"\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
